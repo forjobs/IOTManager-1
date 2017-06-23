@@ -1,5 +1,8 @@
 package com.droid.iotmanager
 
+import android.app.Fragment
+import android.app.FragmentManager
+import android.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
@@ -9,6 +12,7 @@ import android.widget.GridView
 import android.widget.Toast
 import com.droid.iotmanager.adapters.IOTDevicesAdapter
 import com.droid.iotmanager.data.IOTDevice
+import com.droid.iotmanager.fragments.AddDeviceFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.action_add -> {
                 showToast("Add functionality is coming very soon.Till then take a look at the other new cool features!!!")
+                val fragmentManager : FragmentManager = fragmentManager
+                val fragment : Fragment = AddDeviceFragment()
+                val fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
+                fragmentTransaction.add(R.id.fragmentContainer, fragment).commit()
                 return true
             }
             android.R.id.home -> {
@@ -42,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             else -> {
-                showToast("Hacking the toolbar")
+                showToast("Interested in adding new features to the app? Then fork the code at : https://github.com/chdeshmanth/IOTManager")
                 return false
             }
         }

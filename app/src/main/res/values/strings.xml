@@ -2,4 +2,8 @@
     <string name="app_name">IOTManager</string>
     <string name="manager">IOTMANAGER</string>
     <string name="menu_add">ADD</string>
+    <string name="device_name">DEVICE NAME</string>
+    <string name="button">BUTTON</string>
+    <string name="slider">SLIDER</string>
+    <string name="timer">TIMER</string>
 </resources>
