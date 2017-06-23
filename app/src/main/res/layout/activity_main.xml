@@ -5,14 +5,25 @@
     tools:context=".MainActivity"
     android:id="@+id/layout">
     <include layout="@layout/toolbar"/>
-    <GridView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridView"
-        android:verticalSpacing="3dp"
-        android:horizontalSpacing="3dp"
-        android:layout_below="@id/toolbar"
-        android:numColumns="2"
-        android:layout_marginTop="3dp">
-    </GridView>
+        android:layout_below="@id/toolbar">
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridView"
+            android:verticalSpacing="3dp"
+            android:horizontalSpacing="3dp"
+            android:paddingTop="3dp"
+            android:numColumns="2">
+        </GridView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentContainer"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+        </RelativeLayout>
+    </FrameLayout>
 </RelativeLayout>
