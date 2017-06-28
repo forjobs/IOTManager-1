@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.GridView
 import android.widget.Toast
 import com.droid.iotmanager.adapters.IOTDevicesAdapter
@@ -38,11 +39,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_add -> {
-                showToast("Add functionality is coming very soon.Till then take a look at the other new cool features!!!")
                 val fragmentManager : FragmentManager = fragmentManager
                 val fragment : Fragment = AddDeviceFragment()
                 val fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
-                fragmentTransaction.add(R.id.fragmentContainer, fragment).commit()
+                fragmentTransaction.add(R.id.fragmentContainer, fragment).addToBackStack("addFragment").commit()
+                findViewById(R.id.fragmentContainer).visibility = View.VISIBLE
                 return true
             }
             android.R.id.home -> {

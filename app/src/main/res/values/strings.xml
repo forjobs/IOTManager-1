@@ -6,4 +6,6 @@
     <string name="button">BUTTON</string>
     <string name="slider">SLIDER</string>
     <string name="timer">TIMER</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>
